@@ -4,5 +4,5 @@
 *.swp
 *.swo
 
-# We donÎÎt want to bundle any compiled CSS...
+# We don’t want to bundle any compiled CSS...
 *.css
