@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    $MIXINS
+
+    https://raw.github.com/csswizardry/inuit.css/master/generic/_mixins.scss
+\*------------------------------------*/
+/**
+ * Create a fully formed type style (sizing and vertical rhythm) by passing in a
+ * single value, e.g.:
+ *
+   @include font-size(10px);
+ *
+ * Thanks to @redclov3r for the line-height Sass:
+ * twitter.com/redclov3r/status/250301539321798657
+ */
+@mixin font-size($font-size, $line-height:true){
+    font-size:$font-size;
+    font-size:($font-size / $base-font-size)*1rem;
+    @if $line-height == true{
+        line-height:ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+    }
+}
+
+
+
+
+
+/**
+ * Create vendor-prefixed CSS in one go, e.g.
+ *
+   @include vendor(border-radius, 4px);
+ *
+ */
+@mixin vendor($property, $value...){
+    -webkit-#{$property}:$value;
+       -moz-#{$property}:$value;
+        -ms-#{$property}:$value;
+         -o-#{$property}:$value;
+            #{$property}:$value;
+}
+
+
+
+
+
+/**
+ * Give attribute and value (one to four)
+ * Output in rem and pixels.
+ * 0 must be given as 0px!
+ *
+   @include remunit(height, 110px);
+   @include remunit(padding, 10px, 8px);
+   @include remunit(margin, 4px, 8px, 0px);
+ *
+ */
+@mixin remunit($property, $pixels, $pixels2:"", $pixels3:"", $pixels4:"") {
+  @if $pixels4 != "" {
+    #{$property}: $pixels $pixels2 $pixels3 $pixels4;
+    #{$property}: $pixels/$base-font-size+rem $pixels2/$base-font-size+rem $pixels3/$base-font-size+rem $pixels4/$base-font-size+rem;
+  }
+  @else if $pixels3 != "" {
+    #{$property}: $pixels $pixels2 $pixels3;
+    #{$property}: $pixels/$base-font-size+rem $pixels2/$base-font-size+rem $pixels3/$base-font-size+rem;
+  }
+  @else if $pixels2 != "" {
+    #{$property}: $pixels $pixels2;
+    #{$property}: $pixels/$base-font-size+rem $pixels2/$base-font-size+rem;
+  }
+  @else {
+    #{$property}: $pixels;
+    #{$property}: $pixels/$base-font-size+rem;
+  }
+}

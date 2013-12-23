@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    $MAIN
+    https://github.com/csswizardry/inuit.css/blob/master/base/_main.scss
+\*------------------------------------*/
+html{
+    font:#{($base-font-size/16px)*1em}/#{$line-height-ratio} $base-font-family;
+    overflow-y:scroll;
+    min-height:100%;
+}
+
+
+
+
+
+/*------------------------------------*\
+    $HEADINGS
+    https://github.com/csswizardry/inuit.css/blob/master/base/_headings.scss
+\*------------------------------------*/
+/**
+ * As per: csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css
+ *
+ * When we define a heading we also define a corresponding class to go with it.
+ * This allows us to apply, say, `class=alpha` to a `h3`; a double-stranded
+ * heading hierarchy.
+ */
+h1{
+    @include font-size($h1-size);
+}
+h2{
+    @include font-size($h2-size);
+}
+h3{
+    @include font-size($h3-size);
+}
+h4{
+    @include font-size($h4-size);
+}
+h5{
+    @include font-size($h5-size);
+}
+h6{
+    @include font-size($h6-size);
+}
+
+
+
+
+
+/*------------------------------------*\
+    $LISTS
+    https://github.com/csswizardry/inuit.css/blob/master/base/_lists.scss
+\*------------------------------------*/
+/**
+ * Remove vertical spacing from nested lists.
+ */
+li{
+    > ul,
+    > ol{
+         margin-bottom:0;
+     }
+}
+
+
+
+
+
+/*------------------------------------*\
+    $IMAGES
+    https://github.com/csswizardry/inuit.css/blob/master/base/_images.scss
+\*------------------------------------*/
+/**
+ * Demo: jsfiddle.net/inuitcss/yMtur
+ */
+/**
+ * Fluid images.
+ */
+img{
+    max-width:100%;
+}

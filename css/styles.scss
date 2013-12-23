@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+/*------------------------------------*\
+  SETUP
+\*------------------------------------*/
+@import "vars"; // Define your overrides and  custom variables here
+@import "boilerplate/boilerplate"; // Do not edit these files
+
+
+
+
+
+/*------------------------------------*\
+  Useful stuff
+
+  Variables:
+  $base-spacing-unit
+  $base-spacing-unit-rem
+  $half-spacing-unit-rem
+  $half-spacing-unit
+
+  Placholders:
+  %sass-margin-bottom
+  %sass-margin-bottom-double
+
+   Mixins:
+  @include font-size(10px); // will calculate font-size(px and rem) and the line-height for you
+  @include font-size(10px, false); // will not define line-height
+  @include vendor(border-radius, 4px); // generates all vendor prefixes
+\*------------------------------------*/
+
+// Start writing your CSS here.
+
+
+
+
+
+/*------------------------------------*\
+  $MEDIA QUERYS
+  example sizes froms,
+  http://www.stephentgilbert.com/mediaqueries/
+\*------------------------------------*/
+/* Some placeholder media querys */
+/* iphone5 portrait, iPhone 2G-4S portrait*/
+/*
+@media only screen and (min-width: 320px) {
+  $base-font-size:    12px;  // changing the base font size
+  html {
+    font-size:#{($base-font-size/16px)*1em};
+  }
+}
+*/
+
+/*iPhone 2G-4S landscape */
+/*
+@media only screen and (min-width: 480px) {
+  $base-font-size:    14px;
+  html {
+    font-size:#{($base-font-size/16px)*1em};
+  }
+}
+*/
+
+/* iPhone5 landscape, */
+/*
+@media only screen and (min-width: 568px) {
+  $base-font-size:    16px;
+  html {
+    font-size:#{($base-font-size/16px)*1em};
+  }
+}
+*/
+
+/* iPad portrait, */
+/*
+@media only screen and (min-width: 768px) {
+  $base-font-size:    18px;
+  html {
+    font-size:#{($base-font-size/16px)*1em};
+  }
+}
+*/
+
+/* iPad landscape, */
+/*
+@media only screen and (min-width: 1024px) {
+  $base-font-size:    20px;
+  html {
+    font-size:#{($base-font-size/16px)*1em};
+  }
+}
+*/
+
+
+
+
+
+/*------------------------------------*\
+    $PRINT STYLES
+    Uncomment to use.
+    Remember to test before publishing.
+\*------------------------------------*/
+//@import "boilerplate/partials/print";
