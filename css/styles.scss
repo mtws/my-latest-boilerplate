@@ -27,6 +27,9 @@
   @include font-size(10px); // will calculate font-size(px and rem) and the line-height for you
   @include font-size(10px, false); // will not define line-height
   @include vendor(border-radius, 4px); // generates all vendor prefixes
+  @include remunit(height, 110px); // outputs the pixel values as pixels and rems, give 1-4 values. zero must be given as 0px!
+  @include remunit(padding, 10px, 8px);
+  @include remunit(margin, 4px, 8px, 0px);
 \*------------------------------------*/
 
 // Start writing your CSS here.
