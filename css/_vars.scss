@@ -11,6 +11,8 @@
     Supported by IE 8 and newer
  */
 
+ //$use-wordpress-classes: true; //enable if this is a WordPress project
+
 //These are used to calculate the base-spacing-unit
 // You probally want to define the font for the smallest screen size here, if designing "mobile-up"
 // If you want IE 7 & 8 to use another font than the smallest one, it might be easeist to define the desired IE 7-8 font size as $base-font-size.

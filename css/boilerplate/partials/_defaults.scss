@@ -74,3 +74,15 @@ $line-height-ratio: $base-line-height / $base-font-size;
 
 $base-spacing-unit-rem: $line-height-ratio +rem;
 $half-spacing-unit-rem: $line-height-ratio / 2 +rem;
+
+
+
+
+
+/*------------------------------------*\
+    $WORDPRESS
+\*------------------------------------*/
+/**
+ * Enable WordPress styles?
+ */
+$use-wordpress-classes: false!default;
